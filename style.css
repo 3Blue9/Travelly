@@ -1,0 +1,366 @@
+/*======================== Global Styles================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  h1 {
+    font-size: 2.6rem;
+  }
+  
+  
+  h2 {
+    font-size: 4.8rem;
+  }
+  
+  h3 {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+  
+  h4,
+  h5 {
+    font-size: 2.8rem;
+  }
+  
+  li,
+  button,
+  label,
+  input,
+  p {
+    font-size: 2rem;
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  button {
+    padding: 1.5rem 4rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.596);
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  /* ======================================Nav Section With HERO ==============================*/
+  
+  .main-head {
+    background-color: rgba(0, 0, 0, 0.822);
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+  }
+  
+  nav {
+    min-height: 10vh;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+  
+  #logo {
+    flex: 2 1 40rem;
+    font-family: "Carattere", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+  }
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+      url("./img/london_black_and_white-wallpaper-1920x1080.jpg");
+    min-height: 90vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero h3 {
+    padding: 3rem;
+  }
+  
+  /* ===============================LOCATIONS SECTION==============================*/
+  
+  #locations {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+      url("./img/new_york_black_and_white_2-wallpaper-1920x1080.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  
+  .locations-head {
+    height: 45rem;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .locations-head h2 {
+    padding: 1rem 0rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+  }
+  
+  .locations-head h3 {
+    padding: 4rem 0rem;
+    background: linear-gradient(black, rgb(88, 88, 88));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .cloud {
+    position: absolute;
+    top: 3%;
+    right: 0%;
+    pointer-events: none;
+  }
+  .moving-cloud-1 {
+    opacity: 0.85;
+    animation: cloudAnim 3s infinite alternate ease-in-out;
+  }
+  
+  .moving-cloud-2 {
+    top: 10%;
+    right: 18%;
+    z-index: -1;
+    animation: cloudAnim 3.5s infinite alternate ease-in-out;
+  }
+  
+  @keyframes cloudAnim {
+    from {
+      transform: translate(7%, -7%);
+    }
+    to {
+      transform: translate(0%, 0%);
+    }
+  }
+  
+  /*=============================== Benefits section=====================*/
+  
+  #benefits {
+    color: linear-gradient(rgb(185, 69, 69), transparent);
+  }
+  
+  .benefits-head {
+    background-color: #242424;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .benefits-head h3 {
+    padding: 1rem;
+  }
+  
+  .cards {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    text-align: center;
+    flex: 1 1 24rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.336),
+      5px 10px 10px rgba(0, 0, 0, 0.26);
+    border-radius: 1rem;
+  }
+  
+  .cards img {
+    height: 90px;
+  
+    margin: 1rem;
+  }
+  
+  .card h4,
+  .card p {
+    padding: 1rem;
+  }
+  
+  .card-icon {
+    background-color: #cfc8c7;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+  
+  /* ============================contact form section===========================*/
+  
+  #contact {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.253), transparent),
+      url(./img/amirreza-momennia-5_3nATWCTTY-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-wrapper {
+    background: rgba(0, 0, 0, 0.274);
+    width: 35%;
+    color: white;
+    border-radius: 1.5rem;
+  }
+  
+  .form-head {
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.596);
+  }
+  
+  .name-form,
+  .email-form {
+    padding: 2.5rem;
+    text-align: center;
+  }
+  
+  .form-wrapper label {
+    margin: 0rem 3rem;
+  }
+  
+  .form-wrapper input {
+    padding: 0.5rem 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 0.2rem solid darkgray;
+  }
+  
+  .form-wrapper input:focus {
+    outline: none;
+  }
+  
+  .form-wrapper button {
+    width: 100%;
+    border-radius: 0 0 1.5rem 1.5rem;
+    color: white;
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+  
+  /*==========Footer============*/
+  
+  footer {
+    color: white;
+    background: #242424;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+  
+    flex-wrap: wrap;
+  }
+  
+  footer h5 {
+    flex: 1 1 40rem;
+  }
+  
+  footer ul {
+    display: flex;
+    flex: 1 1 40rem;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-wrapper img {
+    height: 30px;
+  }
+  
+  /*==================MEDIA QUERY===========================*/
+  @media screen and (max-width: 931px) {
+    html {
+      font-size: 42%;
+    }
+    nav {
+      text-align: center;
+    }
+    #logo {
+      padding: 1.5rem;
+    }
+    .cloud {
+      height: 40rem;
+      pointer-events: none;
+    }
+    .moving-cloud-1 {
+      z-index: -2;
+    }
+  
+    .moving-cloud-2 {
+      z-index: -1;
+    }
+    .locations-head h3 {
+      background: rgba(77, 77, 77, 0.603);
+      -webkit-text-fill-color: rgb(0, 0, 0);
+      padding: 0.7rem;
+    }
+  
+    .form-wrapper {
+      width: 100%;
+    }
+  
+    footer {
+      text-align: center;
+    }
+  
+    footer h5 {
+      padding: 3rem;
+    }
+  }
+  
